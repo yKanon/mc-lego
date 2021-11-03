@@ -1,0 +1,26 @@
+{
+  "name": "@wss-/core",
+  "version": "1.0.3",
+  "description": "wss core",
+  "author": "文三思 <394769450@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "bin": {
+    "wss": "./bin/index.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@wss-/utils": "file:../utils"
+  },
+  "gitHead": "2d7dbcb4b6abc9cdf5fc4ed6ea90c43b644f120a"
+}

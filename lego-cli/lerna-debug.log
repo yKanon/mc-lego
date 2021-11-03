@@ -1,0 +1,11 @@
+0 silly argv { _: [ 'diff' ], lernaVersion: '4.0.0', '$0': 'lerna' }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/cefl/Desktop/Doing/lego/lego-cli
+3 silly hasCommit
+4 verbose hasCommit true
+5 verbose hasTags false
+6 silly getFirstCommit
+7 error Error: Command failed with exit code 128: git diff 8dd4626a58d5349572c475c25016192b3828933c
+7 error 392ff67c36755c91bae9a863ae4aaf7f83e563d4 --color=auto -- /Users/cefl/Desktop/Doing/lego/lego-cli/packages
+7 error     at makeError (/Users/cefl/Desktop/Doing/lego/lego-cli/node_modules/execa/lib/error.js:60:11)
+7 error     at handlePromise (/Users/cefl/Desktop/Doing/lego/lego-cli/node_modules/execa/index.js:118:26)
