@@ -1,14 +1,14 @@
 'use strict';
 
 const pkg = require('../package.json');
+const log = require('@wss-/log')
 
 module.exports = core;
 
 function core() {
-  // TODO
   checkPackageVersion()
 }
 
 function checkPackageVersion() {
-  console.log(pkg.version);
+  log.notice('cli  version', pkg.version);
 }

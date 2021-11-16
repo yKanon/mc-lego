@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@wss-/log": "file:../../utils/log",
-    "@wss-/utils": "file:../../utils/utils"
+    "import-local": "^3.0.3"
   },
   "gitHead": "2d7dbcb4b6abc9cdf5fc4ed6ea90c43b644f120a"
 }

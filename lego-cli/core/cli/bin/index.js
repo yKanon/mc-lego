@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const importLocal = require('import-local')
+// console.log('__filename :>> ', __filename);
 
 if (importLocal(__filename)) {
   require('npmlog').info('cli', '正在使用 lego-cli 本地版本。。。')
