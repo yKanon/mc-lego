@@ -20,7 +20,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@wss-/utils": "file:../utils"
+    "@wss-/log": "file:../../utils/log",
+    "@wss-/utils": "file:../../utils/utils"
   },
   "gitHead": "2d7dbcb4b6abc9cdf5fc4ed6ea90c43b644f120a"
 }
