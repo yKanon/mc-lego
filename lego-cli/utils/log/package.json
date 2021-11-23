@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/yKanon/mc-lego/issues"
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
   }
 }
