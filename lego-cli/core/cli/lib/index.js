@@ -1,16 +1,25 @@
 'use strict';
 
-const semver = require('semver')
-const log = require('@wss-/log')
+import semver from 'semver'
+import log from '@wss-/log'
 
-const pkg = require('../package.json');
-const { LOWEST_NODE_VERSION} = require('./const')
-
-module.exports = core;
+import pkg from '../package.json'
+import { LOWEST_NODE_VERSION } from './const.js'
 
 function core() {
-  checkNodeVersion()
   checkPackageVersion()
+  checkNodeVersion()
+  checkRoot()
+}
+
+async function checkRoot() {
+  // const rootCheck = (await import('root-check')).default
+  const { default:rootCheck } = await import('root-check')
+  rootCheck()
+  console.log(process.geteuid());
+  // import('root-check').then(({ default: rootCheck }) => {
+  //   rootCheck()
+  // })
 }
 
 function checkPackageVersion() {
@@ -26,3 +35,6 @@ function checkNodeVersion() {
     process.exit(1)
   }
 }
+
+// console.log(core);
+export default core;

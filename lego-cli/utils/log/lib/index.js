@@ -1,6 +1,6 @@
 'use strict';
 
-const log = require('npmlog')
+import log from 'npmlog'
 
 log.heading = 'lego-cli' // 修改前缀
 // log.headingStyle = { fg: 'black', bg: 'white' } 
@@ -8,4 +8,4 @@ log.heading = 'lego-cli' // 修改前缀
 log.level = process.env.LOG_LEVEL || 'info' // 判断 debug 模式
 log.addLevel('success', 2000, { fg: 'green' }) // 自定义 log 方法
 
-module.exports = log
+export default log

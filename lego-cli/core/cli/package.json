@@ -6,6 +6,7 @@
   "homepage": "",
   "license": "ISC",
   "main": "lib/index.js",
+  "type": "module",
   "bin": {
     "wss": "./bin/index.js"
   },
@@ -17,12 +18,14 @@
     "lib"
   ],
   "scripts": {
+    "start": "node --experimental-json-modules --trace-warnings ./bin/index.js",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
     "@wss-/log": "file:../../utils/log",
     "colors": "^1.4.0",
     "import-local": "^3.0.3",
+    "root-check": "^2.0.0",
     "semver": "^7.3.5"
   },
   "gitHead": "2d7dbcb4b6abc9cdf5fc4ed6ea90c43b644f120a"
