@@ -8,7 +8,7 @@
   "main": "lib/index.js",
   "type": "module",
   "bin": {
-    "wss": "./bin/index.js"
+    "wss": "bin/index.js"
   },
   "directories": {
     "lib": "lib",
@@ -18,13 +18,15 @@
     "lib"
   ],
   "scripts": {
-    "start": "node --experimental-json-modules --trace-warnings ./bin/index.js",
+    "start": "node --experimental-json-modules --trace-warnings bin/index.js",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
     "@wss-/log": "file:../../utils/log",
     "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
     "import-local": "^3.0.3",
+    "minimist": "^1.2.5",
     "root-check": "^2.0.0",
     "semver": "^7.3.5"
   },

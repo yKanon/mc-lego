@@ -7,6 +7,6 @@ import log from '@wss-/log'
 if (importLocal(import.meta.url)) {
   log.info('cli', '正在使用 lego-cli 本地版本。。。')
 } else {
-  // console.log('lib', lib);
+  console.log(1);
   lib(process.argv.slice(2))
 }
