@@ -2,16 +2,17 @@
 
 import path from 'path'
 import semver from 'semver'
-import log from '@wss-/log'
 import {existsSync} from 'fs'
 import colors from 'colors/safe.js'
 import {homedir} from 'os'
+import log from '@wss-/log'
+import {updateNotifier} from '@wss-/get-npm-info'
 
 import pkg from '../package.json'
 import {DEFAULT_CLI_HOME, LOWEST_NODE_VERSION} from './const.js'
 
 const userHome = homedir()
-let argv = Object.create(null), cliConfig = Object.create(null)
+let argv = Object.create(null)
 
 async function core(args) {
     try {
@@ -21,9 +22,20 @@ async function core(args) {
         checkUserHome()
         await checkInputArgs(args)
         await checkEnv()
+        await checkGlobalUpdate(pkg)
     } catch (e) {
         log.error(colors.red(e.message))
     }
+}
+
+async function checkGlobalUpdate(pkg) {
+    // const {updateNotifier} = await import('@wss-/get-npm-info')
+    updateNotifier(pkg)
+    // const {default: updateNotifier} = await import('update-notifier')
+    // console.log(updateNotifier);
+    // const notifier = updateNotifier({pkg})
+    // notifier.notify()
+    // console.log(notifier.update)
 }
 
 async function checkEnv() {
@@ -92,6 +104,5 @@ function checkNodeVersion() {
         throw new Error(`当前 Node 版本 ${currentNodeVersion} 不支持，请升级 Node 至 ${lowestNodeVersion} 以上版本。`)
     }
 }
-
 
 export default core;
